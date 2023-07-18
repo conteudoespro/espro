@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
+
+	<meta charset="utf-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+
+	<style>
+		#container {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin: 2%;
+		}
+		
+		#animation {
+			width: 30%;
+			height: auto;
+			margin-right: -5%; /* smaller margin-right */
+		}
+		
+		#text {
+			font-family: 'Montserrat Alternates', sans-serif;
+			font-size: 1em;
+			color: #212121; /* Hex color code for dark gray */
+			text-align: left;
+			letter-spacing: 0.05em; /* Increase kerning */
+			width: 55%;
+			margin-left: 15.5%; /* increased margin-left */
+			padding: 1%; /* smaller padding */
+		}
+		
+		iframe {
+			border: none;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="animation"></div>
+		<div id="text">
+			Na primeira vez em que o cadarço do sapato arrebentou, muitos de nós ficamos sem saber o que fazer na hora. Na segunda vez, resolvemos esse problema automaticamente, sem nem pensar. Na primeira vez, pode ser que alguém tenha nos falado o que fazer. Na segunda, já não foi mais necessário. Isso mostra como é importante conversar com as pessoas.
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			var animation = bodymovin.loadAnimation({
+				container: document.getElementById('animation'),
+				path: 'JSON_Emabrado.json',
+				renderer: 'svg',
+				loop: true,
+				autoplay: true
+			});
+		});
+	</script>
+</body>
+</html>
